@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public float fireRate = 0.2f;
     public Transform firingPoint;
     public GameObject bulletPrefab;
 
     float timeUntilFire;
     PlayerMovement pm;
+    int bulletLimit = 5;
+    int bulletCount = 0;
 
     private void Start()
     {
@@ -18,16 +19,21 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)&& timeUntilFire < timeUntilFire.time)
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-            timeUntilFire = Time.time + fireRate;
         }
     }
 
     void Shoot()
     {
-        float angle = pm.isFacingRight ? 0f : 180f;
-        Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector(0f, 0f, angle)));
+        if (bulletCount < bulletLimit)
+        {
+            float angle = pm.isFacingRight ? 0f : 180f;
+            //Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f, angle)));
+            Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
+            bulletCount++;
+        }       
+           
     }
 }

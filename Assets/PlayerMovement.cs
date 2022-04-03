@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     float speedAmount = 5f;
     float jumpAmount = 3f;
 
+    public bool isFacingRight = true;
+
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
@@ -28,11 +30,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetAxisRaw("Horizontal") == -1) {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            isFacingRight = false ;
         }
 
         else if (Input.GetAxisRaw("Horizontal") == 1)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            isFacingRight = true;
         }
     }
+
+    
 }

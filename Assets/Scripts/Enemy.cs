@@ -22,10 +22,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position += velocity * speedAmount;
         rgb.velocity = new Vector2(speed * -1, rgb.velocity.y);
-
-
     }
     public void TakeDamage(int damage)
     {

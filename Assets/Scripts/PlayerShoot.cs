@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour
     public Transform firingPoint;
     public GameObject bulletPrefab;
 
-    float timeUntilFire;
+    //float timeUntilFire;
     PlayerMovement pm;
     int bulletLimit = 5;
     int bulletCount = 0;
@@ -31,7 +31,6 @@ public class PlayerShoot : MonoBehaviour
         {
             float angle = pm.isFacingRight ? 0f : 180f;
             Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f,angle)));
-            //Instantiate(bulletPrefab, firingPoint.position, firingPoint.rotation);
             bulletCount++;
         }       
            

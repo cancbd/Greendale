@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -9,8 +10,7 @@ public class PlayerShoot : MonoBehaviour
 
     //float timeUntilFire;
     PlayerMovement pm;
-    int bulletLimit = 5;
-    int bulletCount = 0;
+
 
     private void Start()
     {
@@ -22,17 +22,17 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
+
         }
     }
 
     void Shoot()
     {
-        if (bulletCount < bulletLimit)
-        {
-            float angle = pm.isFacingRight ? 0f : 180f;
-            Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f,angle)));
-            bulletCount++;
-        }       
+        
+        float angle = pm.isFacingRight ? 0f : 180f;
+        Instantiate(bulletPrefab, firingPoint.position, Quaternion.Euler(new Vector3(0f, 0f,angle)));
+       
+            
            
     }
 }

@@ -3,7 +3,11 @@ guid: df486a61201fea441be3d2cf53a32f5c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - firingPoint: {instanceID: 0}
+  - bulletPrefab: {instanceID: 0}
+  - spriteRenderer: {instanceID: 0}
+  - newSprite: {fileID: 21300000, guid: 302aa49c8a26d394d91e30997d98cc98, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

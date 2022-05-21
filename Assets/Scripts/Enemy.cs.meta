@@ -6,6 +6,8 @@ MonoImporter:
   defaultReferences:
   - Enemy1Prefab: {instanceID: 0}
   - SpawnPoint: {fileID: 2747301970430309665, guid: 27322b1639c114c4eb36b6cc0d085933, type: 3}
+  - spriteRenderer: {instanceID: 0}
+  - cb2: {fileID: 21300000, guid: 302aa49c8a26d394d91e30997d98cc98, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

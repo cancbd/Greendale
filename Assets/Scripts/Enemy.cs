@@ -10,7 +10,11 @@ public class Enemy : MonoBehaviour
     Vector3 velocity;
     public GameObject Enemy1Prefab;
     public Transform SpawnPoint;
-    
+    public GameObject healthbar;
+    public Sprite healthFull;
+    public Sprite healthMid;
+    public Sprite healthLow;
+
 
     public int health = 100;
     int colCount = 0;
@@ -34,7 +38,6 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            //obf1.img = cb2.
             Destroy(gameObject);
             Create();
         }
@@ -42,7 +45,6 @@ public class Enemy : MonoBehaviour
 
     public void Create()
     {
-        ChangeSprite();
         enemyRemaining = enemyRemaining - 1;
         if (enemyRemaining == 0 && SceneManager.GetActiveScene().buildIndex < 4 )
         {
@@ -50,7 +52,6 @@ public class Enemy : MonoBehaviour
             enemyRemaining = 5;
         }
         Instantiate(Enemy1Prefab, SpawnPoint.position, SpawnPoint.rotation);
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,6 +59,18 @@ public class Enemy : MonoBehaviour
         if (colCount >= 1)
         {
             TakeDamage(34);
+        }
+        if (health > 66)
+        {
+            healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
+        }
+        else if (health > 33)
+        {
+            healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthMid;
+        }
+        else
+        {
+            healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthLow;
         }
         colCount++;
     }

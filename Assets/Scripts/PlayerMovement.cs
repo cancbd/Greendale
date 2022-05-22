@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float jumpAmount = 5f;
 
     public bool isFacingRight = true;
+    public Animator animator;
 
     void Start()
     {
@@ -22,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         velocity = new Vector3(Input.GetAxis("Horizontal"), 0f);
+
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+
         transform.position += velocity * speedAmount * Time.deltaTime;
 
         if (Input.GetButtonDown("Jump") && Mathf.Approximately(rgb.velocity.y, 0)) {

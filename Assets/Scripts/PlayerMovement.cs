@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
 
     float speedAmount = 3f;
-    float jumpAmount = 5f;
+    float jumpAmount = 8f;
 
     public bool isFacingRight = true;
     public Animator animator;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position += velocity * speedAmount * Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump") && Mathf.Approximately(rgb.velocity.y, 0)) {
+        if (Input.GetButtonDown("Jump") && Mathf.Approximately(rgb.velocity.y, 0f)) {
             rgb.AddForce(Vector3.up * jumpAmount, ForceMode2D.Impulse);
         }
 

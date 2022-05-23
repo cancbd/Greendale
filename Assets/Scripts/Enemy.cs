@@ -17,13 +17,13 @@ public class Enemy : MonoBehaviour
 
 
     public int health = 100;
-    int colCount = 0;
     static int enemyRemaining = 5;
 
     // Start is called before the first frame update
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
+        healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
     }
 
     // Update is called once per frame
@@ -56,22 +56,21 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (colCount >= 1)
+        if(collision.gameObject.tag == "Bullet")
         {
             TakeDamage(34);
+            if (health > 66)
+            {
+                healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
+            }
+            else if (health > 33)
+            {
+                healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthMid;
+            }
+            else
+            {
+                healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthLow;
+            }
         }
-        if (health > 66)
-        {
-            healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
-        }
-        else if (health > 33)
-        {
-            healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthMid;
-        }
-        else
-        {
-            healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthLow;
-        }
-        colCount++;
     }
 }

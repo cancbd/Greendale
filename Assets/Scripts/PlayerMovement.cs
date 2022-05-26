@@ -17,10 +17,20 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 StandingSize;
     public Vector2 CrouchingSize;
 
+    public GameObject Britta;
+    public Transform SpawnPoint;
+    public GameObject healthbar;
+    public Sprite healthFull;
+    public Sprite healthMid;
+    public Sprite healthLow;
+
+    public int health = 100;
+
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
         StandingSize = Collider.size;
+        healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
     }
 
     // Update is called once per frame
@@ -59,5 +69,41 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            Create();
+        }
+    }
+
+    public void Create()
+    {
+        Instantiate(Britta, SpawnPoint.position, SpawnPoint.rotation);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            TakeDamage(34);
+            if (health > 66)
+            {
+                healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
+            }
+            else if (health > 33)
+            {
+                healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthMid;
+            }
+            else
+            {
+                healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthLow;
+            }
+        }
+    }
+
 }

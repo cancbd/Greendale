@@ -114,7 +114,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.007896, y: 15.78805}
+  m_Size: {x: 6.799518, y: 14.94211}
   m_EdgeRadius: 0
 --- !u!114 &5286636151531615939
 MonoBehaviour:
@@ -133,6 +133,13 @@ MonoBehaviour:
   Collider: {fileID: 5286636151531615943}
   StandingSize: {x: 4.007896, y: 15.78805}
   CrouchingSize: {x: 6.799518, y: 14.94211}
+  Britta: {fileID: 6227494096922930326, guid: 3e25b08ffb202234d9b94c50bd865334, type: 3}
+  SpawnPoint: {fileID: 8818905590567179846, guid: 50af52096bb5be744b598382e04a91bc, type: 3}
+  healthbar: {fileID: 8380761175682798490, guid: 2b0391a7e59aa5a4a8d173de254d3adc, type: 3}
+  healthFull: {fileID: 21300000, guid: 7ceba3001d7cf2c40b18b56fd8bc616d, type: 3}
+  healthMid: {fileID: 21300000, guid: 302aa49c8a26d394d91e30997d98cc98, type: 3}
+  healthLow: {fileID: 21300000, guid: c0e583d06a61d2246bc7d6f58a8da2d0, type: 3}
+  health: 100
 --- !u!114 &5286636151531615936
 MonoBehaviour:
   m_ObjectHideFlags: 0

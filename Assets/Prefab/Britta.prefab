@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 6227494096922930331}
   - component: {fileID: 6227494096922930330}
   - component: {fileID: 6227494096922930329}
-  - component: {fileID: 6227494096922930328}
   - component: {fileID: 6227494096922930327}
   - component: {fileID: 6227494096922930333}
   - component: {fileID: 4566558643193038936}
@@ -169,23 +168,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.007896, y: 15.78805}
   m_EdgeRadius: 0
---- !u!114 &6227494096922930328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6227494096922930326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81b236895bbe32d47834f71b29d6c6bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isFacingRight: 1
-  animator: {fileID: 0}
-  Collider: {fileID: 0}
-  StandingSize: {x: 4.007896, y: 15.78805}
-  CrouchingSize: {x: 6.799518, y: 14.94211}
 --- !u!114 &6227494096922930327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +199,13 @@ MonoBehaviour:
   Collider: {fileID: 5286636151531615943, guid: 6c06d172d2ce95c46bb3a666eb35469b, type: 3}
   StandingSize: {x: 4.007896, y: 15.78805}
   CrouchingSize: {x: 6.799518, y: 14.94211}
+  Britta: {fileID: 5286636151531615942, guid: 6c06d172d2ce95c46bb3a666eb35469b, type: 3}
+  SpawnPoint: {fileID: 8818905590567179846, guid: 50af52096bb5be744b598382e04a91bc, type: 3}
+  healthbar: {fileID: 8380761175682798490, guid: 2b0391a7e59aa5a4a8d173de254d3adc, type: 3}
+  healthFull: {fileID: 21300000, guid: 7ceba3001d7cf2c40b18b56fd8bc616d, type: 3}
+  healthMid: {fileID: 21300000, guid: 302aa49c8a26d394d91e30997d98cc98, type: 3}
+  healthLow: {fileID: 21300000, guid: c0e583d06a61d2246bc7d6f58a8da2d0, type: 3}
+  health: 100
 --- !u!95 &4566558643193038936
 Animator:
   serializedVersion: 4

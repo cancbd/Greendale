@@ -13,10 +13,14 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isFacingRight = true;
     public Animator animator;
+    public BoxCollider2D Collider;
+    public Vector2 StandingSize;
+    public Vector2 CrouchingSize;
 
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
+        StandingSize = Collider.size;
     }
 
     // Update is called once per frame
@@ -41,6 +45,17 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             isFacingRight = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Collider.size = CrouchingSize;
+            animator.SetBool("isCrouching", true);
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            Collider.size = StandingSize;
+            animator.SetBool("isCrouching", false);
         }
     }
 

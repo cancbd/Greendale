@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8689825903434848348}
   - component: {fileID: 8689825903434848323}
   - component: {fileID: 8689825903434848351}
+  - component: {fileID: 2071540585574133386}
   m_Layer: 0
   m_Name: Enemy1New
   m_TagString: Untagged
@@ -123,7 +124,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.48921227, y: -0.57245636}
+  m_Offset: {x: 0.28979468, y: -0.9504204}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.07562, y: 16.687405}
+  m_Size: {x: 5.4744554, y: 17.443335}
   m_EdgeRadius: 0
 --- !u!114 &8689825903434848351
 MonoBehaviour:
@@ -149,13 +150,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  Enemy1Prefab: {fileID: 4796223344088674985, guid: e9274ee8a0d5b504fae455a9d5415aaa, type: 3}
+  Enemy1Prefab: {fileID: 2802203514518261659, guid: 8b3190738793b21438cb4db14f4134aa, type: 3}
   SpawnPoint: {fileID: 2747301970430309665, guid: 27322b1639c114c4eb36b6cc0d085933, type: 3}
   healthbar: {fileID: 131798901465501436, guid: 1311993a3ff557844ac390ba84ca9d66, type: 3}
   healthFull: {fileID: 21300000, guid: 7ceba3001d7cf2c40b18b56fd8bc616d, type: 3}
   healthMid: {fileID: 21300000, guid: 302aa49c8a26d394d91e30997d98cc98, type: 3}
   healthLow: {fileID: 21300000, guid: c0e583d06a61d2246bc7d6f58a8da2d0, type: 3}
   health: 100
+--- !u!95 &2071540585574133386
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689825903434848322}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3016faf68d594b141a3bd15e2987921a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8724704256580150958
 GameObject:
   m_ObjectHideFlags: 0

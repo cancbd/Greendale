@@ -15,21 +15,37 @@ public class Enemy : MonoBehaviour
     public Sprite healthMid;
     public Sprite healthLow;
 
+    public GameObject bulletPrefab;
+    public float startTimeBtwShots;
+    private float timeBtwShots;
+
 
     public int health = 100;
     static int enemyRemaining = 5;
+    private Vector3 firePos = new Vector3(1, 0,0);
 
     // Start is called before the first frame update
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
         healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
+        timeBtwShots = startTimeBtwShots;
     }
 
     // Update is called once per frame
     void Update()
     {
         rgb.velocity = new Vector2(speed * -1, rgb.velocity.y);
+        if(timeBtwShots <= 0)
+        {
+            Instantiate(bulletPrefab, transform.position-firePos, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
     }
     public void TakeDamage(int damage)
     {

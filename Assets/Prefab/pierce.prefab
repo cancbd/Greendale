@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9191476943319677587}
   - component: {fileID: 5873459476180073533}
   - component: {fileID: 6495751613049480664}
+  - component: {fileID: -2292968932812842743}
   m_Layer: 0
   m_Name: pierce
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785449587281181842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.2866, y: -2.8885, z: 0}
-  m_LocalScale: {x: 0.2756308, y: 0.228392, z: 1}
+  m_LocalPosition: {x: 9.2749, y: -0.4462, z: 0}
+  m_LocalScale: {x: 0.355577, y: 0.334895, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29275727, y: 0.0050086975}
+  m_Offset: {x: 0.25068808, y: 0.0050086975}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.7693686, y: 17.974949}
+  m_Size: {x: 5.1849756, y: 17.974949}
   m_EdgeRadius: 0
 --- !u!50 &5873459476180073533
 Rigidbody2D:
@@ -133,7 +134,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6495751613049480664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,10 +148,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  Enemy1Prefab: {fileID: 5654961204522869644, guid: d7d403680af797746ab213fe16f92f8d, type: 3}
+  Enemy1Prefab: {fileID: 4796223344088674985, guid: e9274ee8a0d5b504fae455a9d5415aaa, type: 3}
   SpawnPoint: {fileID: 2747301970430309665, guid: 27322b1639c114c4eb36b6cc0d085933, type: 3}
   healthbar: {fileID: 131798901465501436, guid: 1311993a3ff557844ac390ba84ca9d66, type: 3}
   healthFull: {fileID: 21300000, guid: 7ceba3001d7cf2c40b18b56fd8bc616d, type: 3}
   healthMid: {fileID: 21300000, guid: 302aa49c8a26d394d91e30997d98cc98, type: 3}
   healthLow: {fileID: 21300000, guid: c0e583d06a61d2246bc7d6f58a8da2d0, type: 3}
+  bulletPrefab: {fileID: 6206598407877063231, guid: 9ada307576389634684ecb92182a013f, type: 3}
+  startTimeBtwShots: 2
   health: 100
+--- !u!95 &-2292968932812842743
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785449587281181842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a994883c73995f849ad73b871a4c5400, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

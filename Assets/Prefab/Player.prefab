@@ -132,7 +132,7 @@ MonoBehaviour:
   animator: {fileID: 5286636151531615937}
   Collider: {fileID: 5286636151531615943}
   StandingSize: {x: 4.007896, y: 15.78805}
-  CrouchingSize: {x: 6.799518, y: 14.94211}
+  CrouchingSize: {x: 6.799518, y: 8}
   Britta: {fileID: 6227494096922930326, guid: 3e25b08ffb202234d9b94c50bd865334, type: 3}
   SpawnPoint: {fileID: 8818905590567179846, guid: 50af52096bb5be744b598382e04a91bc, type: 3}
   healthbar: {fileID: 8380761175682798490, guid: 2b0391a7e59aa5a4a8d173de254d3adc, type: 3}

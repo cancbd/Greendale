@@ -966,8 +966,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 951372684286039949, guid: 06a18430cddb5de448cb4f79627bf77f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 951372684286039949, guid: 06a18430cddb5de448cb4f79627bf77f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0475
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 951372684286039949, guid: 06a18430cddb5de448cb4f79627bf77f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1012,6 +1016,14 @@ PrefabInstance:
     - target: {fileID: 6607864326981239343, guid: 06a18430cddb5de448cb4f79627bf77f, type: 3}
       propertyPath: m_Name
       value: grabageBin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890171817787713474, guid: 06a18430cddb5de448cb4f79627bf77f, type: 3}
+      propertyPath: m_Size.y
+      value: 69.94174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890171817787713474, guid: 06a18430cddb5de448cb4f79627bf77f, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.7334347
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06a18430cddb5de448cb4f79627bf77f, type: 3}

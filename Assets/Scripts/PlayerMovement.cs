@@ -26,11 +26,13 @@ public class PlayerMovement : MonoBehaviour
 
     public int health = 100;
 
+
     void Start()
     {
         rgb = GetComponent<Rigidbody2D>();
         StandingSize = Collider.size;
         healthbar.gameObject.GetComponent<SpriteRenderer>().sprite = healthFull;
+        GameObject.DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame

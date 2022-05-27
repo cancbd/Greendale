@@ -157,6 +157,7 @@ MonoBehaviour:
   healthMid: {fileID: 21300000, guid: 302aa49c8a26d394d91e30997d98cc98, type: 3}
   healthLow: {fileID: 21300000, guid: c0e583d06a61d2246bc7d6f58a8da2d0, type: 3}
   bulletPrefab: {fileID: 6206598407877063231, guid: 9ada307576389634684ecb92182a013f, type: 3}
+  playerSpawnPoint: {fileID: 8818905590567179846, guid: 50af52096bb5be744b598382e04a91bc, type: 3}
   startTimeBtwShots: 2
   health: 100
 --- !u!95 &2071540585574133386

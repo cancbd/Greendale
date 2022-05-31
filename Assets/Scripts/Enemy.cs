@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -19,10 +20,10 @@ public class Enemy : MonoBehaviour
     public float startTimeBtwShots;
     private float timeBtwShots;
 
-
     public int health = 100;
     static int enemyRemaining = 5;
-    private Vector3 firePos = new Vector3(1, 0,0);
+    private Vector3 firePos = new Vector3(1, -1,0);
+    static int levelCount = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class Enemy : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
+
     }
     public void TakeDamage(int damage)
     {
@@ -62,10 +64,15 @@ public class Enemy : MonoBehaviour
     public void Create()
     {
         enemyRemaining = enemyRemaining - 1;
-        if (enemyRemaining == 0 && SceneManager.GetActiveScene().buildIndex < 4 )
+        if (enemyRemaining == 0 && SceneManager.GetActiveScene().buildIndex < 6 )
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            enemyRemaining = 5;
+            levelCount++;
+            enemyRemaining = 5*levelCount;
+            if (levelCount == 5)
+            {
+                SceneManager.LoadScene("YouWin");
+            }
         }
         Instantiate(Enemy1Prefab, SpawnPoint.position, SpawnPoint.rotation);
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite healthLow;
 
     public int health = 100;
+    public static int lifeRemaining = 3;
 
 
     void Start()
@@ -85,7 +87,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void Create()
     {
-        Instantiate(Britta, SpawnPoint.position, SpawnPoint.rotation);
+        if (lifeRemaining != 0)
+        {
+            Instantiate(Britta, SpawnPoint.position, SpawnPoint.rotation);
+            lifeRemaining--;
+        }
+        if (lifeRemaining == 0)
+        {
+            lifeRemaining = 3;
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
